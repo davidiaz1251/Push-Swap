@@ -6,7 +6,7 @@
 /*   By: ldiaz-ra <ldiaz-ra@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 11:22:10 by ldiaz-ra          #+#    #+#             */
-/*   Updated: 2023/12/12 11:18:00 by ldiaz-ra         ###   ########.fr       */
+/*   Updated: 2023/12/12 15:28:28 by ldiaz-ra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ typedef struct s_stack
 t_stack	*lstnew(int content);
 void	lstadd_back(t_stack **lst, t_stack *new);
 void	free_memory(char **memory);
-void	ft_error(char *str);
-int		lstcheck(t_stack *lst, int value);
+void	ft_error();
+int		lstcheck(t_stack *lst, char *value);
 
 #endif

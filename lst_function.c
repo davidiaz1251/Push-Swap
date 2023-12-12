@@ -6,7 +6,7 @@
 /*   By: ldiaz-ra <ldiaz-ra@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 11:11:50 by ldiaz-ra          #+#    #+#             */
-/*   Updated: 2023/12/12 11:14:47 by ldiaz-ra         ###   ########.fr       */
+/*   Updated: 2023/12/12 15:42:22 by ldiaz-ra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,14 @@ void	lstadd_back(t_stack **lst, t_stack *new)
 	}
 }
 
-int	lstcheck(t_stack *lst, int value)
+int	lstcheck(t_stack *lst, char *value)
 {
+
+	if (ft_atoi(value) == 0 && *value != '0')
+		ft_error();
 	while (lst)
 	{
-		if (lst->data == value)
+		if (lst->data == ft_atoi(value))
 			return (1);	
 		lst = lst->next;
 	}

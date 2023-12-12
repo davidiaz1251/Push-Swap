@@ -6,14 +6,14 @@
 /*   By: ldiaz-ra <ldiaz-ra@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 11:16:51 by ldiaz-ra          #+#    #+#             */
-/*   Updated: 2023/12/12 11:17:19 by ldiaz-ra         ###   ########.fr       */
+/*   Updated: 2023/12/12 14:53:16 by ldiaz-ra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_error(char *str)
+void	ft_error()
 {
-	write(1, str, ft_strlen(str));
+	write(1, "Error\n", 6);
 	exit(0);
 }
