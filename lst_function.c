@@ -6,7 +6,7 @@
 /*   By: ldiaz-ra <ldiaz-ra@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 11:11:50 by ldiaz-ra          #+#    #+#             */
-/*   Updated: 2023/12/12 15:42:22 by ldiaz-ra         ###   ########.fr       */
+/*   Updated: 2023/12/18 16:09:06 by ldiaz-ra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,20 @@ t_stack	*lstnew(int content)
 		return (NULL);
 	new->data = content;
 	new->next = NULL;
-	new->prev = NULL;
 	return (new);
+}
+
+int	lstsize(t_stack *lst)
+{
+	int	i;
+
+	i = 0;
+	while (lst)
+	{
+		lst = lst->next;
+		i++;
+	}
+	return (i);
 }
 
 void	lstadd_back(t_stack **lst, t_stack *new)
@@ -36,16 +48,11 @@ void	lstadd_back(t_stack **lst, t_stack *new)
 	}
 }
 
-int	lstcheck(t_stack *lst, char *value)
+t_stack	*lstlast(t_stack *lst)
 {
-
-	if (ft_atoi(value) == 0 && *value != '0')
-		ft_error();
-	while (lst)
-	{
-		if (lst->data == ft_atoi(value))
-			return (1);	
+	if (!lst)
+		return (NULL);
+	while (lst->next)
 		lst = lst->next;
-	}
-	return (0);
+	return (lst);
 }

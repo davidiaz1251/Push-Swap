@@ -3,6 +3,8 @@ SOURCE =	main.c			\
 			errors.c		\
 			free.c			\
 			lst_function.c	\
+			swap.c			\
+			check_stack.c	
 
 OBJ = $(SOURCE:.c=.o)
 LIBFT = Libft/libft.a

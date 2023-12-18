@@ -6,15 +6,15 @@
 /*   By: ldiaz-ra <ldiaz-ra@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 13:27:34 by ldiaz-ra          #+#    #+#             */
-/*   Updated: 2023/09/28 11:43:19 by ldiaz-ra         ###   ########.fr       */
+/*   Updated: 2023/12/18 15:03:05 by ldiaz-ra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+long	ft_atoi(const char *str)
 {
-	int	i[4];
+	long	i[4];
 
 	i[0] = 0;
 	i[1] = 0;

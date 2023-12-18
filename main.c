@@ -6,7 +6,7 @@
 /*   By: ldiaz-ra <ldiaz-ra@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 11:20:28 by ldiaz-ra          #+#    #+#             */
-/*   Updated: 2023/12/12 15:33:17 by ldiaz-ra         ###   ########.fr       */
+/*   Updated: 2023/12/18 18:16:13 by ldiaz-ra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,21 @@ void	stack(int argc, char **argv, t_stack **a)
 			lstadd_back(a, lstnew(ft_atoi(split[j])));
 		}
 		j = -1;
+		free_memory(split);
 	}
-	free_memory(split);
 }
 
+void	printlst(t_stack *lst)
+{
+	t_stack *temp;
+
+	temp = lst;
+	while (temp)
+	{
+		printf("%i\n", temp->data);
+		temp = temp->next;
+	}
+}
 int	main(int argc, char **argv)
 {
 	t_stack	*a;
@@ -43,11 +54,9 @@ int	main(int argc, char **argv)
 	b = NULL;
 	if (argc > 1)
 		stack(argc, argv, &a);
-	while (a)
-	{
-		printf("%i\n", a->data);
-		a = a->next;
-	}
-	
+	printlst(a);
+	printf("----------------------------\n");
+	swap_sa(&a);
+	printlst(a);
 	return (0);	
 }
