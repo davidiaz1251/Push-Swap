@@ -4,7 +4,9 @@ SOURCE =	main.c			\
 			free.c			\
 			lst_function.c	\
 			swap.c			\
-			check_stack.c	
+			check_stack.c	\
+			push_stack.c	\
+			rotate.c
 
 OBJ = $(SOURCE:.c=.o)
 LIBFT = Libft/libft.a

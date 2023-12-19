@@ -1,34 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap.c                                             :+:      :+:    :+:   */
+/*   push_stack.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldiaz-ra <ldiaz-ra@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/18 15:50:21 by ldiaz-ra          #+#    #+#             */
-/*   Updated: 2023/12/19 11:21:08 by ldiaz-ra         ###   ########.fr       */
+/*   Created: 2023/12/19 11:22:12 by ldiaz-ra          #+#    #+#             */
+/*   Updated: 2023/12/19 13:49:18 by ldiaz-ra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	swap(t_stack **lst, char *str)
+void	push_stack(t_stack **stack_from, t_stack **stack_to, char *str)
 {
-	t_stack *temp;
+	t_stack *aux;
 
-	if (!lst || !(*lst) || !((*lst)->next))
+	if (!stack_from || !(*stack_from))
 		return ;
-	temp = (*lst);
-	(*lst) = (*lst)->next;
-	temp->next = (*lst)->next;
-	(*lst)->next = temp;
+	aux = (*stack_from)->next;
+	(*stack_from)->next = (*stack_to);
+	(*stack_to) = (*stack_from);
+	(*stack_from) = aux;
 	if (str)
 		write(1, str, 3);
-}
-
-void	swap_ss(t_stack **stack_a, t_stack **stack_b)
-{
-	swap(stack_a, NULL);
-	swap(stack_b, NULL);
-	write(1, "ss\n", 3);
 }
