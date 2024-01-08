@@ -6,7 +6,8 @@ SOURCE =	main.c			\
 			swap.c			\
 			check_stack.c	\
 			push_stack.c	\
-			rotate.c
+			rotate.c		\
+			low_number.c
 
 OBJ = $(SOURCE:.c=.o)
 LIBFT = Libft/libft.a

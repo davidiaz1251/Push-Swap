@@ -6,7 +6,7 @@
 /*   By: ldiaz-ra <ldiaz-ra@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 11:22:10 by ldiaz-ra          #+#    #+#             */
-/*   Updated: 2023/12/19 15:30:50 by ldiaz-ra         ###   ########.fr       */
+/*   Updated: 2024/01/08 14:23:17 by ldiaz-ra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ t_stack	*lstlast(t_stack *lst);
 int		lstsize(t_stack *lst);
 int		lstcheck(t_stack *lst, char *value);
 int		check_letter(char *value);
+int		low_number(t_stack **a, t_stack **b, int len);
+int		max_list(t_stack *stack);
 void	lstadd_back(t_stack **lst, t_stack *new);
 void	free_memory(char **memory);
 void	ft_error();

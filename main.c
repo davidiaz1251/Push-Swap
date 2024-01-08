@@ -6,7 +6,7 @@
 /*   By: ldiaz-ra <ldiaz-ra@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 11:20:28 by ldiaz-ra          #+#    #+#             */
-/*   Updated: 2023/12/19 15:33:20 by ldiaz-ra         ###   ########.fr       */
+/*   Updated: 2024/01/08 14:31:10 by ldiaz-ra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,8 +54,10 @@ int	main(int argc, char **argv)
 	b = NULL;
 	if (argc > 1)
 		stack(argc, argv, &a);
-	rotate(&a, "r\n");
 	printlst(a);
-
+	printf("-----------\n");
+	if (lstsize(a) <= 5)
+		low_number(&a, &b, lstsize(a));
+	printlst(a);
 	return (0);	
 }
