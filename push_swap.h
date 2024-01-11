@@ -6,7 +6,7 @@
 /*   By: ldiaz-ra <ldiaz-ra@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 11:22:10 by ldiaz-ra          #+#    #+#             */
-/*   Updated: 2024/01/08 14:23:17 by ldiaz-ra         ###   ########.fr       */
+/*   Updated: 2024/01/11 14:23:35 by ldiaz-ra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,6 @@ void	push_stack(t_stack **stack_from, t_stack **stack_to, char *str);
 void	rotate(t_stack **stack, char *str);
 void	rotate_reverse(t_stack **stack, char *str);
 void	rotate_rrr(t_stack **stack_a, t_stack **stack_b);
+void	algorithm(t_stack **a, t_stack **b, int len);
 
 #endif

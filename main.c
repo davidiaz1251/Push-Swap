@@ -6,7 +6,7 @@
 /*   By: ldiaz-ra <ldiaz-ra@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 11:20:28 by ldiaz-ra          #+#    #+#             */
-/*   Updated: 2024/01/08 14:31:10 by ldiaz-ra         ###   ########.fr       */
+/*   Updated: 2024/01/11 15:12:12 by ldiaz-ra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,8 +56,8 @@ int	main(int argc, char **argv)
 		stack(argc, argv, &a);
 	printlst(a);
 	printf("-----------\n");
-	if (lstsize(a) <= 5)
-		low_number(&a, &b, lstsize(a));
+	//if (lstsize(a) <= 5)
+	low_number(&a, &b, lstsize(a));
 	printlst(a);
 	return (0);	
 }

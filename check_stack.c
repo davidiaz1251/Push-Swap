@@ -6,7 +6,7 @@
 /*   By: ldiaz-ra <ldiaz-ra@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 16:09:24 by ldiaz-ra          #+#    #+#             */
-/*   Updated: 2023/12/18 16:09:39 by ldiaz-ra         ###   ########.fr       */
+/*   Updated: 2024/01/11 13:13:44 by ldiaz-ra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 int	check_letter(char *value)
 {
+	if (*value == '-' || *value == '+')
+		value++;
 	while (*value)
 	{
 		if (*value < '0' || *value > '9')
