@@ -6,7 +6,7 @@
 /*   By: ldiaz-ra <ldiaz-ra@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 11:20:28 by ldiaz-ra          #+#    #+#             */
-/*   Updated: 2024/01/22 14:44:31 by ldiaz-ra         ###   ########.fr       */
+/*   Updated: 2024/01/22 15:34:52 by ldiaz-ra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ void	stack(int argc, char **argv, t_stack **a)
 	while (argc - (++i) >= 1)
 	{
 		split = ft_split(argv[i], ' ');
+		if (!split[0])
+			ft_error();
 		while (split[++j])
 		{
 			if (lstcheck(*a, split[j]))
@@ -52,15 +54,16 @@ int	main(int argc, char **argv)
 
 	a = NULL;
 	b = NULL;
-	if (argc > 1)
+       	if (argc > 1)
+	{
 		stack(argc, argv, &a);
-	printlst(a);
-	printf("-----------\n");
-	if (ordered(a))
-		return (0);
-	index_stack(&a);
-	low_number(&a, &b, lstsize(a));
-	printlst(a);
-
-	return (0);	
+		// printlst(a);
+		// printf("-----------\n");
+		if (ordered(a))
+			return (0);
+		index_stack(&a);
+		low_number(&a, &b, lstsize(a));
+		// printlst(a);	
+	}
+	exit (0);	
 }

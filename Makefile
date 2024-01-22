@@ -35,3 +35,7 @@ fclean: clean
 	@echo 'fclean ok'
 
 re: fclean all
+
+test: all
+	cp ./$(NAME) test/
+	cd test/; bash ./push_swap_test.sh 4 4
