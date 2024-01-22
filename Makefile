@@ -8,7 +8,8 @@ SOURCE =	main.c			\
 			push_stack.c	\
 			rotate.c		\
 			low_number.c	\
-			algorithm.c
+			algorithm.c		\
+			minmax.c
 
 OBJ = $(SOURCE:.c=.o)
 LIBFT = Libft/libft.a
