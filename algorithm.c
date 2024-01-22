@@ -3,14 +3,40 @@
 /*                                                        :::      ::::::::   */
 /*   algorithm.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldiaz-ra <ldiaz-ra@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:08:11 by ldiaz-ra          #+#    #+#             */
-/*   Updated: 2024/01/11 15:12:39 by ldiaz-ra         ###   ########.fr       */
+/*   Updated: 2024/01/11 21:46:32 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void	index_stack(t_stack **a)
+{
+	t_stack *aux;
+	t_stack *temp;
+	int	i;
+	int	num;
+
+	i = 1;
+	num = 0;
+	temp = *a;
+	while (num < lstsize(*a))
+	{
+		aux = *a;
+		while (aux)
+		{
+			if (temp->data > aux->data)
+				i++;
+			aux = aux->next;
+		}
+		temp->index = i;
+		i = 1;
+		temp = temp->next;
+		num++;
+	}
+}
 
 static int	number_bits(int len)
 {
@@ -39,9 +65,9 @@ void	algorithm(t_stack **a, t_stack **b, int len)
 		j = -1;
 		while (++j < len)
 		{
-			if (((*a)->data >> i & 1) == 1)
+			if (((*a)->index >> i & 1) == 1)
 				rotate(a, "ra\n");
-			else if (((*a)->data >> i & 1) == 0)
+			else if (((*a)->index >> i & 1) == 0)
 				push_stack(a, b, "pb\n");
 		}
 		while (lstsize(*b) != 0)

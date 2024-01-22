@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldiaz-ra <ldiaz-ra@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 11:20:28 by ldiaz-ra          #+#    #+#             */
-/*   Updated: 2024/01/11 15:12:12 by ldiaz-ra         ###   ########.fr       */
+/*   Updated: 2024/01/11 22:33:26 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,10 +54,11 @@ int	main(int argc, char **argv)
 	b = NULL;
 	if (argc > 1)
 		stack(argc, argv, &a);
-	printlst(a);
-	printf("-----------\n");
-	//if (lstsize(a) <= 5)
+	// printlst(a);
+	// printf("-----------\n");
+	index_stack(&a);
 	low_number(&a, &b, lstsize(a));
-	printlst(a);
+	// printlst(a);
+
 	return (0);	
 }

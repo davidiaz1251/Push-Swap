@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldiaz-ra <ldiaz-ra@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 11:22:10 by ldiaz-ra          #+#    #+#             */
-/*   Updated: 2024/01/11 14:23:35 by ldiaz-ra         ###   ########.fr       */
+/*   Updated: 2024/01/11 21:39:46 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 typedef struct s_stack
 {
 	int	data;
+	int index;
 	struct s_stack	*next;
 }	t_stack;
 
@@ -39,5 +40,6 @@ void	rotate(t_stack **stack, char *str);
 void	rotate_reverse(t_stack **stack, char *str);
 void	rotate_rrr(t_stack **stack_a, t_stack **stack_b);
 void	algorithm(t_stack **a, t_stack **b, int len);
+void	index_stack(t_stack **a);
 
 #endif
