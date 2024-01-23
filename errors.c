@@ -6,14 +6,15 @@
 /*   By: ldiaz-ra <ldiaz-ra@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 11:16:51 by ldiaz-ra          #+#    #+#             */
-/*   Updated: 2024/01/22 15:21:51 by ldiaz-ra         ###   ########.fr       */
+/*   Updated: 2024/01/23 11:45:35 by ldiaz-ra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_error()
+void	ft_error(t_stack **a)
 {
+	free_stack(a);
 	write(2, "Error\n", 6);
 	exit(0);
 }

@@ -6,7 +6,7 @@
 /*   By: ldiaz-ra <ldiaz-ra@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:08:11 by ldiaz-ra          #+#    #+#             */
-/*   Updated: 2024/01/22 12:25:37 by ldiaz-ra         ###   ########.fr       */
+/*   Updated: 2024/01/23 12:27:17 by ldiaz-ra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	index_stack(t_stack **a)
 			aux = aux->next;
 		}
 		temp->index = i;
-		i = 1;
+		i = 0;
 		temp = temp->next;
 		num++;
 	}

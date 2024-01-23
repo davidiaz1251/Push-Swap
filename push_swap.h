@@ -6,7 +6,7 @@
 /*   By: ldiaz-ra <ldiaz-ra@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 11:22:10 by ldiaz-ra          #+#    #+#             */
-/*   Updated: 2024/01/22 12:46:50 by ldiaz-ra         ###   ########.fr       */
+/*   Updated: 2024/01/23 10:53:10 by ldiaz-ra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,8 @@ int		min_list(t_stack *stack_a);
 int		ordered(t_stack *stack_a);
 void	lstadd_back(t_stack **lst, t_stack *new);
 void	free_memory(char **memory);
-void	ft_error();
+void	ft_error(t_stack **a);
+void	free_stack(t_stack **stack);
 void	swap(t_stack **lst, char *str);
 void	swap_ss(t_stack **stack_a, t_stack **stack_b);
 void	push_stack(t_stack **stack_from, t_stack **stack_to, char *str);

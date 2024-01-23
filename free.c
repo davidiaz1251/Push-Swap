@@ -6,7 +6,7 @@
 /*   By: ldiaz-ra <ldiaz-ra@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 11:15:51 by ldiaz-ra          #+#    #+#             */
-/*   Updated: 2023/12/12 11:16:21 by ldiaz-ra         ###   ########.fr       */
+/*   Updated: 2024/01/23 12:12:23 by ldiaz-ra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,14 @@ void	free_memory(char **memory)
 		y++;
 	}
 	free(memory);
+}
+
+void	free_stack(t_stack **stack)
+{
+	if(*stack)
+	{
+		free_stack(&(*stack)->next);
+		free(*stack);
+		*stack = NULL;
+	}
 }
