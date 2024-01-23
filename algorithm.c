@@ -6,7 +6,7 @@
 /*   By: ldiaz-ra <ldiaz-ra@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:08:11 by ldiaz-ra          #+#    #+#             */
-/*   Updated: 2024/01/23 12:27:17 by ldiaz-ra         ###   ########.fr       */
+/*   Updated: 2024/01/23 12:57:57 by ldiaz-ra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void	index_stack(t_stack **a)
 {
-	t_stack *aux;
-	t_stack *temp;
-	int	i;
-	int	num;
+	t_stack	*aux;
+	t_stack	*temp;
+	int		i;
+	int		num;
 
 	i = 1;
 	num = 0;
@@ -40,7 +40,7 @@ void	index_stack(t_stack **a)
 
 static int	number_bits(int len)
 {
-	int num_bits;
+	int	num_bits;
 	int	i;
 
 	num_bits = 0;
@@ -59,7 +59,6 @@ void	algorithm(t_stack **a, t_stack **b, int len)
 	i = -1;
 	j = -1;
 	num_bits = number_bits(len);
-
 	while (++i < num_bits)
 	{
 		j = -1;
@@ -71,7 +70,6 @@ void	algorithm(t_stack **a, t_stack **b, int len)
 				push_stack(a, b, "pb\n");
 		}
 		while (lstsize(*b) != 0)
-			push_stack(b, a, "pa\n");	
+			push_stack(b, a, "pa\n");
 	}
-	
 }

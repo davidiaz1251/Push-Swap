@@ -6,7 +6,7 @@
 /*   By: ldiaz-ra <ldiaz-ra@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 12:01:57 by ldiaz-ra          #+#    #+#             */
-/*   Updated: 2024/01/22 14:57:02 by ldiaz-ra         ###   ########.fr       */
+/*   Updated: 2024/01/23 12:55:47 by ldiaz-ra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,9 @@ static void	two_numbers(t_stack **a)
 
 static void	three_numbers(t_stack **a)
 {
-	int max;
+	int	max;
 
 	max = max_list(*a);
-
 	if ((*a)->data == max)
 		rotate(a, "ra\n");
 	else if ((*a)->next->data == max)
@@ -31,9 +30,10 @@ static void	three_numbers(t_stack **a)
 	if ((*a)->data > (*a)->next->data)
 		swap(a, "sa\n");
 }
+
 static void	four_numbers(t_stack **a, t_stack **b)
 {
-	int min;
+	int	min;
 
 	min = min_list(*a);
 	if ((*a)->next->data == min)
@@ -50,7 +50,6 @@ static void	four_numbers(t_stack **a, t_stack **b)
 	push_stack(a, b, "pb\n");
 	three_numbers(a);
 	push_stack(b, a, "pa\n");
-
 }
 
 static void	five_numbers(t_stack **a, t_stack **b)
@@ -79,9 +78,8 @@ static void	five_numbers(t_stack **a, t_stack **b)
 	push_stack(b, a, "pa\n");
 }
 
-int low_number(t_stack **a, t_stack **b, int len)
+int	low_number(t_stack **a, t_stack **b, int len)
 {
-	(void)b;
 	if (len == 2)
 		two_numbers(a);
 	else if (len == 3)

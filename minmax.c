@@ -6,15 +6,15 @@
 /*   By: ldiaz-ra <ldiaz-ra@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 12:45:33 by ldiaz-ra          #+#    #+#             */
-/*   Updated: 2024/01/22 12:58:57 by ldiaz-ra         ###   ########.fr       */
+/*   Updated: 2024/01/23 12:54:01 by ldiaz-ra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int max_list(t_stack *stack)
+int	max_list(t_stack *stack)
 {
-	t_stack *temp;
+	t_stack	*temp;
 	int		i;
 
 	temp = stack;
@@ -27,9 +27,10 @@ int max_list(t_stack *stack)
 	}
 	return (i);
 }
-int min_list(t_stack *stack_a)
+
+int	min_list(t_stack *stack_a)
 {
-	int min;
+	int	min;
 
 	min = INT_MAX;
 	while (stack_a)

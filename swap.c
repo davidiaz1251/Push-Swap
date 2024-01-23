@@ -6,7 +6,7 @@
 /*   By: ldiaz-ra <ldiaz-ra@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 15:50:21 by ldiaz-ra          #+#    #+#             */
-/*   Updated: 2023/12/19 11:21:08 by ldiaz-ra         ###   ########.fr       */
+/*   Updated: 2024/01/23 12:52:55 by ldiaz-ra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	swap(t_stack **lst, char *str)
 {
-	t_stack *temp;
+	t_stack	*temp;
 
 	if (!lst || !(*lst) || !((*lst)->next))
 		return ;

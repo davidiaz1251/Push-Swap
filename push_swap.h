@@ -6,20 +6,20 @@
 /*   By: ldiaz-ra <ldiaz-ra@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 11:22:10 by ldiaz-ra          #+#    #+#             */
-/*   Updated: 2024/01/23 10:53:10 by ldiaz-ra         ###   ########.fr       */
+/*   Updated: 2024/01/23 12:59:23 by ldiaz-ra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SAWP_H
-# define PUSH_SAWP_H
+#ifndef PUSH_SWAP_H
+# define PUSH_SWAP_H
 # include "./Libft/libft.h"
 # include <stdio.h>
 # include <limits.h>
 
 typedef struct s_stack
 {
-	int	data;
-	int index;
+	int				data;
+	int				index;
 	struct s_stack	*next;
 }	t_stack;
 

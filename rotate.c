@@ -6,7 +6,7 @@
 /*   By: ldiaz-ra <ldiaz-ra@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 13:48:53 by ldiaz-ra          #+#    #+#             */
-/*   Updated: 2024/01/08 14:29:46 by ldiaz-ra         ###   ########.fr       */
+/*   Updated: 2024/01/23 12:53:13 by ldiaz-ra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	rotate(t_stack **stack, char *str)
 {
-	t_stack *aux;
+	t_stack	*aux;
 
 	if (!stack || !(*stack) || !((*stack)->next))
 		return ;
@@ -35,7 +35,7 @@ void	rotate_rr(t_stack **stack_a, t_stack **stack_b)
 
 void	rotate_reverse(t_stack **stack, char *str)
 {
-	t_stack *aux;
+	t_stack	*aux;
 
 	if (!stack || !(*stack) || !((*stack)->next))
 		return ;

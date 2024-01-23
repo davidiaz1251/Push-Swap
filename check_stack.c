@@ -6,7 +6,7 @@
 /*   By: ldiaz-ra <ldiaz-ra@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 16:09:24 by ldiaz-ra          #+#    #+#             */
-/*   Updated: 2024/01/22 15:48:07 by ldiaz-ra         ###   ########.fr       */
+/*   Updated: 2024/01/23 12:56:42 by ldiaz-ra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int	ordered(t_stack *stack_a)
 	while (stack_a->next)
 	{
 		if (!(stack_a->data < stack_a->next->data))
-			return (0);	
+			return (0);
 		stack_a = stack_a->next;
 	}
 	return (1);
