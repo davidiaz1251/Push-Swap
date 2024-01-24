@@ -6,7 +6,7 @@
 /*   By: ldiaz-ra <ldiaz-ra@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 12:45:33 by ldiaz-ra          #+#    #+#             */
-/*   Updated: 2024/01/23 12:54:01 by ldiaz-ra         ###   ########.fr       */
+/*   Updated: 2024/01/24 10:09:24 by ldiaz-ra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	max_list(t_stack *stack)
 	int		i;
 
 	temp = stack;
-	i = 0;
+	i = INT_MIN;
 	while (temp)
 	{
 		if (temp->data > i)

@@ -6,7 +6,7 @@
 /*   By: ldiaz-ra <ldiaz-ra@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 11:20:28 by ldiaz-ra          #+#    #+#             */
-/*   Updated: 2024/01/23 12:54:33 by ldiaz-ra         ###   ########.fr       */
+/*   Updated: 2024/01/24 10:09:08 by ldiaz-ra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,5 @@ int	main(int argc, char **argv)
 		low_number(&a, &b, lstsize(a));
 		free_stack(&a);
 	}
-	exit (0);
+	return (0);
 }

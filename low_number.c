@@ -6,17 +6,11 @@
 /*   By: ldiaz-ra <ldiaz-ra@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 12:01:57 by ldiaz-ra          #+#    #+#             */
-/*   Updated: 2024/01/23 12:55:47 by ldiaz-ra         ###   ########.fr       */
+/*   Updated: 2024/01/24 10:13:23 by ldiaz-ra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-static void	two_numbers(t_stack **a)
-{
-	if ((*a)->data > (*a)->next->data)
-		swap(a, "sa\n");
-}
 
 static void	three_numbers(t_stack **a)
 {
@@ -81,7 +75,7 @@ static void	five_numbers(t_stack **a, t_stack **b)
 int	low_number(t_stack **a, t_stack **b, int len)
 {
 	if (len == 2)
-		two_numbers(a);
+		swap(a, "sa\n");
 	else if (len == 3)
 		three_numbers(a);
 	else if (len == 4)
