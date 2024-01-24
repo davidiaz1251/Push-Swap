@@ -6,7 +6,7 @@
 /*   By: ldiaz-ra <ldiaz-ra@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 16:09:24 by ldiaz-ra          #+#    #+#             */
-/*   Updated: 2024/01/23 12:56:42 by ldiaz-ra         ###   ########.fr       */
+/*   Updated: 2024/01/24 10:22:23 by ldiaz-ra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,11 @@ int	check_letter(char *value)
 int	lstcheck(t_stack *lst, char *value)
 {
 	if (check_letter(value) || \
-	(ft_atoi(value) < INT_MIN || ft_atoi(value) > INT_MAX))
+	(ft_atol(value) < INT_MIN || ft_atol(value) > INT_MAX))
 		return (1);
 	while (lst)
 	{
-		if (lst->data == ft_atoi(value))
+		if (lst->data == ft_atol(value))
 			return (1);
 		lst = lst->next;
 	}

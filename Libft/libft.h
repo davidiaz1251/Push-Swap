@@ -6,7 +6,7 @@
 /*   By: ldiaz-ra <ldiaz-ra@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 17:08:55 by ldiaz-ra          #+#    #+#             */
-/*   Updated: 2024/01/23 13:01:43 by ldiaz-ra         ###   ########.fr       */
+/*   Updated: 2024/01/24 10:21:06 by ldiaz-ra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@
 # include <unistd.h>
 
 /************** PROTOTYPES FUNCTION ****************/
-long		ft_atoi(const char *str);
+int			ft_atoi(const char *str);
+long		ft_atol(const char *str);
 int			ft_isalnum(int c);
 int			ft_isalpha(int c);
 int			ft_isascii(int c);

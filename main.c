@@ -6,7 +6,7 @@
 /*   By: ldiaz-ra <ldiaz-ra@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 11:20:28 by ldiaz-ra          #+#    #+#             */
-/*   Updated: 2024/01/24 10:09:08 by ldiaz-ra         ###   ########.fr       */
+/*   Updated: 2024/01/24 10:22:07 by ldiaz-ra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	stack(int argc, char **argv, t_stack **a)
 		{
 			if (lstcheck(*a, split[j]))
 				ft_error(a);
-			lstadd_back(a, lstnew(ft_atoi(split[j])));
+			lstadd_back(a, lstnew(ft_atol(split[j])));
 		}
 		j = -1;
 		free_memory(split);
