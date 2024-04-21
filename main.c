@@ -6,7 +6,7 @@
 /*   By: ldiaz-ra <ldiaz-ra@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 11:20:28 by ldiaz-ra          #+#    #+#             */
-/*   Updated: 2024/01/24 10:22:07 by ldiaz-ra         ###   ########.fr       */
+/*   Updated: 2024/02/01 11:57:58 by ldiaz-ra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,10 @@ int	main(int argc, char **argv)
 	{
 		stack(argc, argv, &a);
 		if (ordered(a))
+		{
+			free_stack(&a);
 			return (0);
+		}
 		index_stack(&a);
 		low_number(&a, &b, lstsize(a));
 		free_stack(&a);
